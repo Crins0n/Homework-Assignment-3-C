@@ -1,3 +1,8 @@
+/* 
+Christopher Hinson, 26MAY2022, COP2000 (Online)
+
+Write a program that creates storefront for Gunter's Mountain Shop allowing the user to select whether they want to shop either the Outlet Store or Main Store. Determine the number of items the user would like to purchase and display the applicable tax, grand total (less tax), and grand total (including tax). Additionally, determine whether the user is a student. If the user is a student apply and display updated totals reflecting the student discount. */
+
 #include <iomanip>
 #include <iostream>
 
@@ -201,7 +206,9 @@ int main() {
                 << "Total: " << grand_total << std::setw(5) << "\t"
                 << "Total w/ Disc: $" << gt_w_student_discount << std::endl;
     }
-
+    else {
+      std::cout << "Thank you for shopping." << std::endl;
+    }
     break;
 
   case 2:
@@ -346,16 +353,18 @@ int main() {
                 << "Total: " << grand_total << std::setw(5) << "\t"
                 << "Total w/ Disc: $" << gt_w_student_discount << std::endl;
     }
-
+    else {
+      std::cout << "Thank you for shopping." << std::endl;
+    }
     break;
 
   case 3:
     std::cout << "You have exited the program." << std::endl;
-    break; // How do I exit the program?
+    break; 
 
   default:
     if (menu < 1 || menu > 3)
       std::cout << "Error. You have entered an invalid option."
-                << std::endl; // How do I exit the program
+                << std::endl; 
   }
 }
